@@ -161,9 +161,11 @@ export default function Home() {
                       <span className="sr-only">Email</span>
                     </Link>
                   </Button>
-                  <Button variant="outline" className="flex items-center gap-2">
-                    <FileText className="h-4 w-4" />
-                    <span>Télécharger CV</span>
+                  <Button variant="outline" className="flex items-center gap-2" asChild>
+                    <Link href="/images/benjamin_gottrant_cv_data_analyste.pdf" download>
+                      <FileText className="h-4 w-4" />
+                      <span>Télécharger CV</span>
+                    </Link>
                   </Button>
                 </div>
               </div>
