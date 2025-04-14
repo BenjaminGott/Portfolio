@@ -162,7 +162,7 @@ export default function Home() {
                     </Link>
                   </Button>
                   <Button variant="outline" className="flex items-center gap-2" asChild>
-                    <Link href="/images/benjamin_gottrant_cv_data_analyste.pdf" download>
+                    <Link href="/images/benjamin_gottrant_cv_data_analyste.pdf" target="_blank" download rel="noopener noreferrer">
                       <FileText className="h-4 w-4" />
                       <span>Télécharger CV</span>
                     </Link>
