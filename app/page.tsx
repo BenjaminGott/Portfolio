@@ -344,7 +344,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Contact Section
+         {/* Contact Section */}
         <section id="contact" className="container py-24 md:py-32">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
@@ -380,7 +380,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <Card>
+                {/* <Card>
                   <CardContent className="p-6 space-y-4">
                     <h3 className="text-xl font-semibold">Formulaire de contact</h3>
                     <form name="contact" method="POST" data-netlify="true">
@@ -448,10 +448,10 @@ export default function Home() {
                       </div>
                     </form>
                   </CardContent>
-                </Card>
+                </Card> */}
               </div>
             </div>
-          </section> */}
+          </section> 
       </main>
       <footer className="border-t py-6 md:py-8">
         <div className="container flex flex-col items-center justify-center gap-4 md:flex-row md:justify-between">
