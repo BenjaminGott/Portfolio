@@ -346,104 +346,112 @@ export default function Home() {
 
         {/* Contact Section */}
         <section id="contact" className="container py-24 md:py-32">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl font-bold tracking-tighter">Me contacter</h2>
-              <p className="text-muted-foreground">
-                Vous recherchez un stagiaire ou un alternant en data analyse ? N'hésitez pas à me contacter pour
-                discuter de vos besoins.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <Phone className="h-5 w-5 text-muted-foreground" />
-                  <p>+33 7 67 28 67 19</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-muted-foreground" />
-                  <p>benjamin.gottrant@gmail.com</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <MapPin className="h-5 w-5 text-muted-foreground" />
-                  <p>Lyon - Ouest</p>
-                </div>
-                <div className="flex items-center gap-3">
-                  <Linkedin className="h-5 w-5 text-muted-foreground" />
-                  <p>linkedin.com/in/benjamin-gottrant</p>
-                </div>
-              </div>
-              <div className="pt-4">
-                <Button asChild>
-                  <Link href="mailto:benjamin.gottrant@gmail.com">
-                    Envoyer un email <ArrowRight className="ml-2 h-4 w-4" />
-                  </Link>
-                </Button>
-              </div>
-            </div>
-            <div>
-              <Card>
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="text-xl font-semibold">Formulaire de contact</h3>
-                  <div className="space-y-3">
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="space-y-2">
-                        <label htmlFor="first-name" className="text-sm font-medium">
-                          Prénom
-                        </label>
-                        <input
-                          id="first-name"
-                          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                          placeholder="Prénom"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="last-name" className="text-sm font-medium">
-                          Nom
-                        </label>
-                        <input
-                          id="last-name"
-                          className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                          placeholder="Nom"
-                        />
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="email" className="text-sm font-medium">
-                        Email
-                      </label>
-                      <input
-                        id="email"
-                        type="email"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="email@example.com"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="subject" className="text-sm font-medium">
-                        Sujet
-                      </label>
-                      <input
-                        id="subject"
-                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Sujet de votre message"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <label htmlFor="message" className="text-sm font-medium">
-                        Message
-                      </label>
-                      <textarea
-                        id="message"
-                        className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                        placeholder="Votre message..."
-                      />
-                    </div>
-                    <Button className="w-full">Envoyer</Button>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <h2 className="text-3xl font-bold tracking-tighter">Me contacter</h2>
+                <p className="text-muted-foreground">
+                  Vous recherchez un stagiaire ou un alternant en data analyse ? N'hésitez pas à me contacter pour
+                  discuter de vos besoins.
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3">
+                    <Phone className="h-5 w-5 text-muted-foreground" />
+                    <p>+33 7 67 28 67 19</p>
                   </div>
-                </CardContent>
-              </Card>
+                  <div className="flex items-center gap-3">
+                    <Mail className="h-5 w-5 text-muted-foreground" />
+                    <p>benjamin.gottrant@gmail.com</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <MapPin className="h-5 w-5 text-muted-foreground" />
+                    <p>Lyon - Ouest</p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <Linkedin className="h-5 w-5 text-muted-foreground" />
+                    <p>linkedin.com/in/benjamin-gottrant</p>
+                  </div>
+                </div>
+                <div className="pt-4">
+                  <Button asChild>
+                    <Link href="mailto:benjamin.gottrant@gmail.com">
+                      Envoyer un email <ArrowRight className="ml-2 h-4 w-4" />
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+              <div>
+                <Card>
+                  <CardContent className="p-6 space-y-4">
+                    <h3 className="text-xl font-semibold">Formulaire de contact</h3>
+                    <form name="contact" method="POST" data-netlify="true">
+                      <input type="hidden" name="form-name" value="contact" />
+                      <div className="space-y-3">
+                        <div className="grid grid-cols-2 gap-3">
+                          <div className="space-y-2">
+                            <label htmlFor="first-name" className="text-sm font-medium">
+                              Prénom
+                            </label>
+                            <input
+                              id="first-name"
+                              name="first-name"
+                              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                              placeholder="Prénom"
+                            />
+                          </div>
+                          <div className="space-y-2">
+                            <label htmlFor="last-name" className="text-sm font-medium">
+                              Nom
+                            </label>
+                            <input
+                              id="last-name"
+                              name="last-name"
+                              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                              placeholder="Nom"
+                            />
+                          </div>
+                        </div>
+                        <div className="space-y-2">
+                          <label htmlFor="email" className="text-sm font-medium">
+                            Email
+                          </label>
+                          <input
+                            id="email"
+                            name="email"
+                            type="email"
+                            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            placeholder="email@example.com"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <label htmlFor="subject" className="text-sm font-medium">
+                            Sujet
+                          </label>
+                          <input
+                            id="subject"
+                            name="subject"
+                            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            placeholder="Sujet de votre message"
+                          />
+                        </div>
+                        <div className="space-y-2">
+                          <label htmlFor="message" className="text-sm font-medium">
+                            Message
+                          </label>
+                          <textarea
+                            id="message"
+                            name="message"
+                            className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            placeholder="Votre message..."
+                          />
+                        </div>
+                        <Button type="submit" className="w-full">Envoyer</Button>
+                      </div>
+                    </form>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
       </main>
       <footer className="border-t py-6 md:py-8">
         <div className="container flex flex-col items-center justify-center gap-4 md:flex-row md:justify-between">
