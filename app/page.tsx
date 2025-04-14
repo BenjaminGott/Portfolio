@@ -107,7 +107,7 @@ export default function Home() {
               <div>
                 <img
                   src="/images/benjamin-photo.jpg"
-                  alt="Photo de Benjamin Gottrant"
+                  alt="Benjamin Gottrant"
                   className="rounded-full aspect-square object-cover mx-auto shadow-lg"
                   width={400}
                   height={400}

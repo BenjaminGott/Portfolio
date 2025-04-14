@@ -14,7 +14,6 @@ export default function ProjectCard({ title, description, tags, image }: Project
       <div className="relative">
         <img
           src={image || "/placeholder.svg"}
-          alt={title}
           className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
