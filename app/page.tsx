@@ -381,120 +381,120 @@ export default function Home() {
               </div>
               <div>
               <Card>
-  <CardContent className="p-6 space-y-4">
-    <h3 className="text-xl font-semibold">Formulaire d'inscription</h3>
-    <form name="inscription" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="inscription" />
+              <CardContent className="p-6 space-y-4">
+  <h3 className="text-xl font-semibold">Formulaire d'inscription</h3>
+  <form name="inscription" method="POST" data-netlify="true">
+    <input type="hidden" name="form-name" value="inscription" />
 
-      {/* Civilité */}
-      <fieldset className="space-y-2">
-        <legend className="font-medium">Civilité</legend>
-        <div className="flex gap-4">
-          <label className="flex items-center gap-2">
-            <input type="radio" name="civilite" value="madame" required />
-            Madame
-          </label>
-          <label className="flex items-center gap-2">
-            <input type="radio" name="civilite" value="monsieur" />
-            Monsieur
-          </label>
-        </div>
-      </fieldset>
-
-      {/* Prénom, Nom */}
-      <div className="grid grid-cols-2 gap-4">
-        <div className="space-y-2">
-          <label htmlFor="prenom" className="text-sm font-medium">Prénom</label>
-          <input id="prenom" name="prenom" required className="border border-input rounded-md px-3 py-2 text-sm" />
-        </div>
-        <div className="space-y-2">
-          <label htmlFor="nom" className="text-sm font-medium">Nom</label>
-          <input id="nom" name="nom" required className="border border-input rounded-md px-3 py-2 text-sm" />
-        </div>
+    {/* Civilité */}
+    <fieldset className="space-y-2">
+      <legend className="font-medium">Civilité</legend>
+      <div className="flex gap-4">
+        <label className="flex items-center gap-2">
+          <input type="radio" name="civilite" value="madame" required />
+          Madame
+        </label>
+        <label className="flex items-center gap-2">
+          <input type="radio" name="civilite" value="monsieur" />
+          Monsieur
+        </label>
       </div>
+    </fieldset>
 
-      {/* Email */}
+    {/* Prénom, Nom */}
+    <div className="grid grid-cols-2 gap-4">
       <div className="space-y-2">
-        <label htmlFor="email" className="text-sm font-medium">Email</label>
-        <input type="email" id="email" name="email" required className="border border-input rounded-md px-3 py-2 text-sm "
- />
+        <label htmlFor="prenom" className="text-sm font-medium">Prénom</label>
+        <input id="prenom" name="prenom" required className="border border-input rounded-md px-3 py-2 text-sm" />
       </div>
-
-      {/* Code postal */}
       <div className="space-y-2">
-        <label htmlFor="code-postal" className="text-sm font-medium">Code postal</label>
-        <input id="code-postal" name="code-postal" pattern="[0-9]{5}" className="input" />
-        <p className="text-xs text-muted-foreground">Format : 5 chiffres</p>
+        <label htmlFor="nom" className="text-sm font-medium">Nom</label>
+        <input id="nom" name="nom" required className="border border-input rounded-md px-3 py-2 text-sm" />
       </div>
+    </div>
 
-      {/* Ville, Âge, Date de naissance */}
-      <div className="grid grid-cols-3 gap-4">
-        <div className="space-y-2">
-          <label htmlFor="ville" className="text-sm font-medium">Ville</label>
-          <input id="ville" name="ville" required className="border border-input rounded-md py-2 text-sm " />
-        </div>
-        <div className="space-y-2">
-          <label htmlFor="age" className="text-sm font-medium">Âge</label>
-          <input type="number" id="age" name="age" min="0" max="120" required className="border border-input rounded-md px-3 py-2 text-sm " />
-        </div>
-        <div className="space-y-2">
-          <label htmlFor="date-naissance" className="text-sm font-medium">Date de naissance</label>
-          <input type="date" id="date-naissance" name="date-naissance" required className="input" />
-        </div>
-      </div>
+    {/* Email */}
+    <div className="space-y-2">
+      <label htmlFor="email" className="text-sm font-medium">Email</label>
+      <input type="email" id="email" name="email" required className="border border-input rounded-md px-3 py-2 text-sm" />
+    </div>
 
-      {/* Profession */}
+    {/* Code postal */}
+    <div className="space-y-2">
+      <label htmlFor="code-postal" className="text-sm font-medium">Code postal</label>
+      <input id="code-postal" name="code-postal" pattern="[0-9]{5}" className="border border-input rounded-md px-3 py-2 text-sm" />
+      <p className="text-xs text-muted-foreground">Format : 5 chiffres</p>
+    </div>
+
+    {/* Ville, Âge, Date de naissance */}
+    <div className="grid grid-cols-3 gap-4">
       <div className="space-y-2">
-        <label htmlFor="profession" className="text-sm font-medium">Profession</label>
-        <select id="profession" name="profession" required className="input">
-          <option value="">-- Choisissez votre profession --</option>
-          <option value="etudiant">Étudiant</option>
-          <option value="salarie">Salarié</option>
-          <option value="independant">Indépendant</option>
-          <option value="autre">Autre</option>
-        </select>
+        <label htmlFor="ville" className="text-sm font-medium">Ville</label>
+        <input id="ville" name="ville" required className="border border-input rounded-md py-2 text-sm" />
       </div>
-
-      {/* Pays */}
       <div className="space-y-2">
-        <label htmlFor="pays" className="text-sm font-medium">Pays</label>
-        <select id="pays" name="pays" required className="input">
-          <option value="">-- Choisissez votre pays --</option>
-          <option value="FR">France</option>
-          <option value="BE">Belgique</option>
-          <option value="CH">Suisse</option>
-          <option value="CA">Canada</option>
-        </select>
+        <label htmlFor="age" className="text-sm font-medium">Âge</label>
+        <input type="number" id="age" name="age" min="0" max="120" required className="border border-input rounded-md px-3 py-2 text-sm" />
       </div>
-
-      {/* Centres d'intérêt */}
-      <fieldset className="space-y-2">
-        <legend className="font-medium">Centres d'intérêt</legend>
-        <div className="flex gap-4">
-          <label className="flex items-center gap-2">
-            <input type="checkbox" name="interets" value="art" />
-            Art
-          </label>
-          <label className="flex items-center gap-2">
-            <input type="checkbox" name="interets" value="technologie" />
-            Technologie
-          </label>
-          <label className="flex items-center gap-2">
-            <input type="checkbox" name="interets" value="musique" />
-            Musique
-          </label>
-        </div>
-      </fieldset>
-
-      {/* Conditions */}
-      <div className="flex items-center gap-2">
-        <input type="checkbox" id="conditions" name="conditions" required />
-        <label htmlFor="conditions">J'accepte les conditions générales</label>
+      <div className="space-y-2">
+        <label htmlFor="date-naissance" className="text-sm font-medium">Date de naissance</label>
+        <input type="date" id="date-naissance" name="date-naissance" required className="border border-input rounded-md px-3 py-2 text-sm" />
       </div>
+    </div>
 
-      <Button type="submit" className="w-full mt-4">S'inscrire</Button>
-    </form>
-  </CardContent>
+    {/* Profession */}
+    <div className="space-y-2">
+      <label htmlFor="profession" className="text-sm font-medium">Profession</label>
+      <select id="profession" name="profession" required className="border border-input rounded-md px-3 py-2 text-sm">
+        <option value="">-- Choisissez votre profession --</option>
+        <option value="etudiant">Étudiant</option>
+        <option value="salarie">Salarié</option>
+        <option value="independant">Indépendant</option>
+        <option value="autre">Autre</option>
+      </select>
+    </div>
+
+    {/* Pays */}
+    <div className="space-y-2">
+      <label htmlFor="pays" className="text-sm font-medium">Pays</label>
+      <select id="pays" name="pays" required className="border border-input rounded-md px-3 py-2 text-sm">
+        <option value="">-- Choisissez votre pays --</option>
+        <option value="FR">France</option>
+        <option value="BE">Belgique</option>
+        <option value="CH">Suisse</option>
+        <option value="CA">Canada</option>
+      </select>
+    </div>
+
+    {/* Centres d'intérêt */}
+    <fieldset className="space-y-2">
+      <legend className="font-medium">Centres d'intérêt</legend>
+      <div className="flex gap-4">
+        <label className="flex items-center gap-2">
+          <input type="checkbox" name="interets" value="art" />
+          Art
+        </label>
+        <label className="flex items-center gap-2">
+          <input type="checkbox" name="interets" value="technologie" />
+          Technologie
+        </label>
+        <label className="flex items-center gap-2">
+          <input type="checkbox" name="interets" value="musique" />
+          Musique
+        </label>
+      </div>
+    </fieldset>
+
+    {/* Conditions */}
+    <div className="flex items-center gap-2">
+      <input type="checkbox" id="conditions" name="conditions" required />
+      <label htmlFor="conditions">J'accepte les conditions générales</label>
+    </div>
+
+    <Button type="submit" className="w-full mt-4">S'inscrire</Button>
+  </form>
+</CardContent>
+
 </Card>
 
               </div>
