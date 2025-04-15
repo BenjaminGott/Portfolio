@@ -380,75 +380,123 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                {/* <Card>
-                  <CardContent className="p-6 space-y-4">
-                    <h3 className="text-xl font-semibold">Formulaire de contact</h3>
-                    <form name="contact" method="POST" data-netlify="true">
-                      <input type="hidden" name="form-name" value="contact" />
-                      <div className="space-y-3">
-                        <div className="grid grid-cols-2 gap-3">
-                          <div className="space-y-2">
-                            <label htmlFor="first-name" className="text-sm font-medium">
-                              Prénom
-                            </label>
-                            <input
-                              id="first-name"
-                              name="first-name"
-                              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                              placeholder="Prénom"
-                            />
-                          </div>
-                          <div className="space-y-2">
-                            <label htmlFor="last-name" className="text-sm font-medium">
-                              Nom
-                            </label>
-                            <input
-                              id="last-name"
-                              name="last-name"
-                              className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                              placeholder="Nom"
-                            />
-                          </div>
-                        </div>
-                        <div className="space-y-2">
-                          <label htmlFor="email" className="text-sm font-medium">
-                            Email
-                          </label>
-                          <input
-                            id="email"
-                            name="email"
-                            type="email"
-                            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                            placeholder="email@example.com"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <label htmlFor="subject" className="text-sm font-medium">
-                            Sujet
-                          </label>
-                          <input
-                            id="subject"
-                            name="subject"
-                            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                            placeholder="Sujet de votre message"
-                          />
-                        </div>
-                        <div className="space-y-2">
-                          <label htmlFor="message" className="text-sm font-medium">
-                            Message
-                          </label>
-                          <textarea
-                            id="message"
-                            name="message"
-                            className="flex min-h-[120px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                            placeholder="Votre message..."
-                          />
-                        </div>
-                        <Button type="submit" className="w-full">Envoyer</Button>
-                      </div>
-                    </form>
-                  </CardContent>
-                </Card> */}
+              <Card>
+  <CardContent className="p-6 space-y-4">
+    <h3 className="text-xl font-semibold">Formulaire d'inscription</h3>
+    <form name="inscription" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="inscription" />
+
+      {/* Civilité */}
+      <fieldset className="space-y-2">
+        <legend className="font-medium">Civilité</legend>
+        <div className="flex gap-4">
+          <label className="flex items-center gap-2">
+            <input type="radio" name="civilite" value="madame" required />
+            Madame
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="radio" name="civilite" value="monsieur" />
+            Monsieur
+          </label>
+        </div>
+      </fieldset>
+
+      {/* Prénom, Nom */}
+      <div className="grid grid-cols-2 gap-4">
+        <div className="space-y-2">
+          <label htmlFor="prenom" className="text-sm font-medium">Prénom</label>
+          <input id="prenom" name="prenom" required className="border border-input rounded-md px-3 py-2 text-sm" />
+        </div>
+        <div className="space-y-2">
+          <label htmlFor="nom" className="text-sm font-medium">Nom</label>
+          <input id="nom" name="nom" required className="border border-input rounded-md px-3 py-2 text-sm" />
+        </div>
+      </div>
+
+      {/* Email */}
+      <div className="space-y-2">
+        <label htmlFor="email" className="text-sm font-medium">Email</label>
+        <input type="email" id="email" name="email" required className="border border-input rounded-md px-3 py-2 text-sm "
+ />
+      </div>
+
+      {/* Code postal */}
+      <div className="space-y-2">
+        <label htmlFor="code-postal" className="text-sm font-medium">Code postal</label>
+        <input id="code-postal" name="code-postal" pattern="[0-9]{5}" className="input" />
+        <p className="text-xs text-muted-foreground">Format : 5 chiffres</p>
+      </div>
+
+      {/* Ville, Âge, Date de naissance */}
+      <div className="grid grid-cols-3 gap-4">
+        <div className="space-y-2">
+          <label htmlFor="ville" className="text-sm font-medium">Ville</label>
+          <input id="ville" name="ville" required className="border border-input rounded-md py-2 text-sm " />
+        </div>
+        <div className="space-y-2">
+          <label htmlFor="age" className="text-sm font-medium">Âge</label>
+          <input type="number" id="age" name="age" min="0" max="120" required className="border border-input rounded-md px-3 py-2 text-sm " />
+        </div>
+        <div className="space-y-2">
+          <label htmlFor="date-naissance" className="text-sm font-medium">Date de naissance</label>
+          <input type="date" id="date-naissance" name="date-naissance" required className="input" />
+        </div>
+      </div>
+
+      {/* Profession */}
+      <div className="space-y-2">
+        <label htmlFor="profession" className="text-sm font-medium">Profession</label>
+        <select id="profession" name="profession" required className="input">
+          <option value="">-- Choisissez votre profession --</option>
+          <option value="etudiant">Étudiant</option>
+          <option value="salarie">Salarié</option>
+          <option value="independant">Indépendant</option>
+          <option value="autre">Autre</option>
+        </select>
+      </div>
+
+      {/* Pays */}
+      <div className="space-y-2">
+        <label htmlFor="pays" className="text-sm font-medium">Pays</label>
+        <select id="pays" name="pays" required className="input">
+          <option value="">-- Choisissez votre pays --</option>
+          <option value="FR">France</option>
+          <option value="BE">Belgique</option>
+          <option value="CH">Suisse</option>
+          <option value="CA">Canada</option>
+        </select>
+      </div>
+
+      {/* Centres d'intérêt */}
+      <fieldset className="space-y-2">
+        <legend className="font-medium">Centres d'intérêt</legend>
+        <div className="flex gap-4">
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="interets" value="art" />
+            Art
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="interets" value="technologie" />
+            Technologie
+          </label>
+          <label className="flex items-center gap-2">
+            <input type="checkbox" name="interets" value="musique" />
+            Musique
+          </label>
+        </div>
+      </fieldset>
+
+      {/* Conditions */}
+      <div className="flex items-center gap-2">
+        <input type="checkbox" id="conditions" name="conditions" required />
+        <label htmlFor="conditions">J'accepte les conditions générales</label>
+      </div>
+
+      <Button type="submit" className="w-full mt-4">S'inscrire</Button>
+    </form>
+  </CardContent>
+</Card>
+
               </div>
             </div>
           </section> 
