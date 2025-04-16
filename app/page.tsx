@@ -383,7 +383,7 @@ export default function Home() {
               <Card>
               <CardContent className="p-6 space-y-4">
   <h3 className="text-xl font-semibold">Formulaire d'inscription</h3>
-  <form name="inscription" method="POST" data-netlify="true">
+  <form name="inscription" >
     <input type="hidden" name="form-name" value="inscription" />
 
     {/* Civilité */}
